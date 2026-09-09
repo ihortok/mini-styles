@@ -1,0 +1,8 @@
+@layer mini {
+  .mini-card {
+    width: 100%;
+    padding: var(--mini-space-4);
+    border: 1px solid var(--mini-color-border);
+    border-radius: var(--mini-radius);
+  }
+}
