@@ -1,0 +1,42 @@
+@layer mini {
+  .mini-form {
+    display: grid;
+    gap: var(--mini-space-4);
+  }
+
+  .mini-label {
+    display: block;
+    margin-bottom: var(--mini-space-2);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .mini-input,
+  .mini-select,
+  .mini-textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: var(--mini-space-3);
+    border: 1px solid var(--mini-color-border);
+    border-radius: var(--mini-radius);
+    font: inherit;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    background: transparent;
+    color: inherit;
+
+    &:focus-visible {
+      outline: 2px solid var(--mini-color-accent);
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  .mini-textarea {
+    resize: vertical;
+  }
+}

@@ -29,5 +29,38 @@
       <button class="mini-btn">Read more</button>
     </div>
   </div>
+
+  <section aria-labelledby="forms-heading">
+    <h2 id="forms-heading">Forms</h2>
+    <form class="mini-form">
+      <div>
+        <label class="mini-label" for="name">Name</label>
+        <input class="mini-input" id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe">
+      </div>
+      <div>
+        <label class="mini-label" for="email">Email</label>
+        <input class="mini-input" id="email" name="email" type="email" autocomplete="email" placeholder="jane@example.com">
+      </div>
+      <div>
+        <label class="mini-label" for="topic">Topic</label>
+        <select class="mini-select" id="topic" name="topic">
+          <option value="">Choose a topic</option>
+          <option value="general">General question</option>
+          <option value="feedback">Feedback</option>
+        </select>
+      </div>
+      <div>
+        <label class="mini-label" for="message">Message</label>
+        <textarea class="mini-textarea" id="message" name="message" rows="4" placeholder="Your message"></textarea>
+      </div>
+      <div>
+        <label class="mini-label" for="disabled-input">Disabled input</label>
+        <input class="mini-input" id="disabled-input" type="text" value="Unavailable" disabled>
+      </div>
+      <div>
+        <button class="mini-btn" type="button">Send message</button>
+      </div>
+    </form>
+  </section>
 </body>
 </html>
