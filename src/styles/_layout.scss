@@ -1,0 +1,34 @@
+@layer mini {
+  .mini-page {
+    max-width: 44rem;
+    margin-inline: auto;
+    padding: var(--mini-space-xl) var(--mini-space-lg);
+  }
+
+  .mini-header {
+    margin-bottom: var(--mini-space-xl);
+    padding-bottom: var(--mini-space-lg);
+    border-bottom: 3px double var(--mini-color-border);
+
+    > p {
+      color: var(--mini-color-muted);
+    }
+  }
+
+  .mini-section {
+    margin-bottom: var(--mini-space-xl);
+
+    > h2 {
+      margin-bottom: var(--mini-space-lg);
+      padding-bottom: var(--mini-space-md);
+      border-bottom: 1px solid var(--mini-color-border);
+    }
+  }
+
+  .mini-row {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--mini-space-lg);
+  }
+}
