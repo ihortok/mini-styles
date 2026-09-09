@@ -7,4 +7,40 @@
     border-radius: var(--mini-radius);
     background: var(--mini-color-surface);
   }
+
+  .mini-card--image-top,
+  .mini-card--image-left {
+    padding: 0;
+    overflow: hidden;
+
+    > .mini-card__image {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-bottom: 1px solid var(--mini-color-border);
+    }
+
+    > .mini-card__body {
+      min-width: 0;
+      padding: var(--mini-space-lg);
+      overflow-wrap: anywhere;
+    }
+  }
+
+  @media (min-width: 36rem) {
+    .mini-card--image-left {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+
+      > .mini-card__image {
+        height: 100%;
+        min-height: 0;
+        aspect-ratio: auto;
+        border-bottom: 0;
+        border-right: 1px solid var(--mini-color-border);
+      }
+    }
+  }
 }
