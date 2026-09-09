@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini styles demo</title>
+  <link rel="stylesheet" href="../dist/mini-styles.css">
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 2rem; }
+    .row { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+  <h1>Mini styles</h1>
+
+  <h2>Buttons</h2>
+  <div class="row">
+    <button class="mini-btn">Primary</button>
+    <button class="mini-btn mini-btn--danger">Danger</button>
+    <button class="mini-btn mini-btn--outline">Outline</button>
+    <button class="mini-btn" disabled>Disabled</button>
+  </div>
+</body>
+</html>

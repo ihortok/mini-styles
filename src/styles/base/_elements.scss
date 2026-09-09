@@ -1,0 +1,30 @@
+@layer mini {
+  h1, h2, h3, h4 {
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: var(--mini-space-4);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--mini-space-3);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--mini-space-2);
+  }
+
+  h4 {
+    font-size: 1.125rem;
+    margin-bottom: var(--mini-space-2);
+  }
+
+  p {
+    margin-bottom: var(--mini-space-3);
+  }
+}

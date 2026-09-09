@@ -1,13 +1,23 @@
 {
   "name": "mini-styles",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist",
+    "src/styles"
+  ],
+  "exports": {
+    "./styles.css": "./dist/mini-styles.min.css",
+    "./scss": "./src/styles/index.scss"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "scripts": {
+    "css": "sass src/styles/index.scss dist/mini-styles.css --no-source-map --style=expanded",
+    "css:min": "lightningcss --minify --targets \">= 0.5%\" dist/mini-styles.css -o dist/mini-styles.min.css",
+    "build": "npm run css && npm run css:min",
+    "dev": "sass --watch src/styles/index.scss dist/mini-styles.css --no-source-map"
+  },
+  "devDependencies": {
+    "lightningcss-cli": "^1.33.0",
+    "sass": "^1.104.0"
+  }
 }
