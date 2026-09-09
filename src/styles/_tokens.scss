@@ -1,8 +1,15 @@
 @layer mini {
   :root {
-    --mini-color-accent: #3355ff;
-    --mini-color-accent-hover: #2244ee;
-    --mini-color-border: #cccccc;
+    --mini-color-bg: #f4f1e9;
+    --mini-color-surface: #fffdf7;
+    --mini-color-text: #292923;
+    --mini-color-muted: #68685e;
+    --mini-color-accent: #344c60;
+    --mini-color-accent-hover: #243747;
+    --mini-color-border: #8b8b7e;
+    --mini-font-body: Arial, Helvetica, sans-serif;
+    --mini-font-heading: Georgia, 'Times New Roman', serif;
+    --mini-font-mono: 'Courier New', Courier, monospace;
     --mini-radius: 0.25rem;
     --mini-space-2: 0.25rem;
     --mini-space-3: 0.5rem;

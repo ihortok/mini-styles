@@ -1,8 +1,11 @@
 @layer mini {
   .mini-card {
+    box-sizing: border-box;
     width: 100%;
     padding: var(--mini-space-4);
     border: 1px solid var(--mini-color-border);
+    border-top: 3px double var(--mini-color-border);
     border-radius: var(--mini-radius);
+    background: var(--mini-color-surface);
   }
 }

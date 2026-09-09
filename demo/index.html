@@ -6,32 +6,48 @@
   <title>Mini styles demo</title>
   <link rel="stylesheet" href="../dist/mini-styles.css">
   <style>
-    body { font-family: system-ui, sans-serif; padding: 2rem; }
-    .row { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    body { max-width: 44rem; margin: 0 auto; padding: 2rem 1rem; }
+    header { border-bottom: 3px double var(--mini-color-border); padding-bottom: 1rem; margin-bottom: 2rem; }
+    header p { color: var(--mini-color-muted); }
+    section { margin-bottom: 2rem; }
+    section > h2 { border-bottom: 1px solid var(--mini-color-border); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+    .row { display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
   </style>
 </head>
 <body>
-  <h1>Mini styles</h1>
+  <header>
+    <h1>Mini styles</h1>
+    <p>A small collection of everyday web elements.</p>
+    <nav aria-label="Demo sections">
+      <a href="#buttons-heading">Buttons</a> &middot;
+      <a href="#cards-heading">Cards</a> &middot;
+      <a href="#forms-heading">Forms</a>
+    </nav>
+  </header>
 
-  <h2>Buttons</h2>
-  <div class="row">
-    <button class="mini-btn">Primary</button>
-    <button class="mini-btn mini-btn--danger">Danger</button>
-    <button class="mini-btn mini-btn--outline">Outline</button>
-    <button class="mini-btn" disabled>Disabled</button>
-  </div>
-
-  <h2>Cards</h2>
-  <div class="row">
-    <div class="mini-card">
-      <h3>Card 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut laoreet tincidunt, nunc nisl aliquam nunc, eget aliquam nisl nunc eu nunc.</p>
-      <button class="mini-btn">Read more</button>
+  <section aria-labelledby="buttons-heading">
+    <h2 id="buttons-heading">01. Buttons</h2>
+    <div class="row">
+      <button class="mini-btn">Primary</button>
+      <button class="mini-btn mini-btn--danger">Danger</button>
+      <button class="mini-btn mini-btn--outline">Outline</button>
+      <button class="mini-btn" disabled>Disabled</button>
     </div>
-  </div>
+  </section>
+
+  <section aria-labelledby="cards-heading">
+    <h2 id="cards-heading">02. Cards</h2>
+    <div class="row">
+      <div class="mini-card">
+        <h3>From the notice board</h3>
+        <p>A simple space for a short update, a useful reference, or a note to your readers.</p>
+        <button class="mini-btn">Read more</button>
+      </div>
+    </div>
+  </section>
 
   <section aria-labelledby="forms-heading">
-    <h2 id="forms-heading">Forms</h2>
+    <h2 id="forms-heading">03. Forms</h2>
     <form class="mini-form">
       <div>
         <label class="mini-label" for="name">Name</label>

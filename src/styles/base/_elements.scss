@@ -1,6 +1,14 @@
 @layer mini {
+  body {
+    font-family: var(--mini-font-body);
+    line-height: 1.5;
+    background: var(--mini-color-bg);
+    color: var(--mini-color-text);
+  }
+
   h1, h2, h3, h4 {
-    font-weight: 600;
+    font-family: var(--mini-font-heading);
+    font-weight: 700;
     line-height: 1.2;
     margin-top: 0;
   }
@@ -26,6 +34,21 @@
   }
 
   p {
+    margin-top: 0;
     margin-bottom: var(--mini-space-3);
+  }
+
+  a {
+    color: var(--mini-color-accent);
+    text-underline-offset: 0.15em;
+
+    &:hover {
+      color: var(--mini-color-accent-hover);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--mini-color-accent);
+      outline-offset: 2px;
+    }
   }
 }

@@ -1,34 +1,47 @@
 @layer mini {
   .mini-btn {
     padding: var(--mini-space-2) var(--mini-space-3);
-    border: 1px solid transparent;
+    border: 1px solid var(--mini-btn-border, var(--mini-color-accent));
     border-radius: var(--mini-radius);
+    font-family: var(--mini-font-mono);
     font-size: 0.875rem;
-    font-weight: 500;
-    line-height: 1.2;
+    font-weight: 700;
+    line-height: 1.5;
     cursor: pointer;
     background: var(--mini-btn-bg, var(--mini-color-accent));
-    color: var(--mini-btn-fg, #fff);
+    color: var(--mini-btn-fg, var(--mini-color-surface));
+    box-shadow: 2px 2px 0 var(--mini-color-border);
 
-    &:hover {
+    &:hover:not(:disabled) {
       background: var(--mini-btn-bg-hover, var(--mini-color-accent-hover));
     }
 
-    &[disabled] {
+    &:active:not(:disabled) {
+      transform: translate(2px, 2px);
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--mini-color-accent);
+      outline-offset: 4px;
+    }
+
+    &:disabled {
       opacity: 0.6;
       cursor: not-allowed;
+      box-shadow: none;
     }
   }
 
   .mini-btn--danger {
-    --mini-btn-bg: #e74c3c;
-    --mini-btn-bg-hover: #c0392b;
-    --mini-btn-fg: #fff;
+    --mini-btn-bg: #854539;
+    --mini-btn-bg-hover: #69362d;
+    --mini-btn-border: #69362d;
   }
 
   .mini-btn--outline {
-    --mini-btn-bg: transparent;
-    --mini-btn-bg-hover: color-mix(in srgb, var(--mini-color-accent) 12%, transparent);
+    --mini-btn-bg: var(--mini-color-surface);
+    --mini-btn-bg-hover: var(--mini-color-bg);
     --mini-btn-fg: var(--mini-color-accent);
     border-color: var(--mini-color-accent);
   }

@@ -7,8 +7,9 @@
   .mini-label {
     display: block;
     margin-bottom: var(--mini-space-2);
+    font-family: var(--mini-font-mono);
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   .mini-input,
@@ -22,8 +23,13 @@
     font: inherit;
     font-size: 0.875rem;
     line-height: 1.5;
-    background: transparent;
-    color: inherit;
+    background: var(--mini-color-surface);
+    color: var(--mini-color-text);
+
+    &::placeholder {
+      color: var(--mini-color-muted);
+      opacity: 1;
+    }
 
     &:focus-visible {
       outline: 2px solid var(--mini-color-accent);
@@ -31,6 +37,7 @@
     }
 
     &:disabled {
+      background: var(--mini-color-bg);
       opacity: 0.6;
       cursor: not-allowed;
     }
