@@ -1,12 +1,4 @@
 @layer mini {
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
   body {
     font-family: var(--mini-font-body);
     line-height: 1.5;
@@ -14,36 +6,71 @@
     color: var(--mini-color-text);
   }
 
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--mini-font-heading);
     font-weight: 700;
     line-height: 1.2;
-    margin-top: 0;
   }
 
   h1 {
     font-size: 2rem;
-    margin-bottom: var(--mini-space-4);
+    margin-bottom: var(--mini-space-lg);
   }
 
   h2 {
     font-size: 1.5rem;
-    margin-bottom: var(--mini-space-3);
+    margin-bottom: var(--mini-space-md);
   }
 
   h3 {
     font-size: 1.25rem;
-    margin-bottom: var(--mini-space-2);
+    margin-bottom: var(--mini-space-sm);
   }
 
   h4 {
     font-size: 1.125rem;
-    margin-bottom: var(--mini-space-2);
+    margin-bottom: var(--mini-space-sm);
   }
 
-  p {
-    margin-top: 0;
-    margin-bottom: var(--mini-space-3);
+  h5, h6 {
+    font-size: 1rem;
+    margin-bottom: var(--mini-space-sm);
+  }
+
+  p, ul, ol, dl, blockquote {
+    margin-bottom: var(--mini-space-md);
+  }
+
+  ul, ol {
+    padding-inline-start: 1.5em;
+
+    ul, ol {
+      margin-bottom: 0;
+    }
+  }
+
+  dt {
+    font-weight: 700;
+  }
+
+  dd {
+    margin-inline-start: var(--mini-space-lg);
+  }
+
+  blockquote {
+    padding-inline-start: var(--mini-space-lg);
+    border-inline-start: 3px double var(--mini-color-border);
+    color: var(--mini-color-muted);
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  hr {
+    margin-block: var(--mini-space-lg);
+    border: 0;
+    border-top: 1px solid var(--mini-color-border);
   }
 
   a {

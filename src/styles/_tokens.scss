@@ -6,13 +6,15 @@
     --mini-color-muted: #68685e;
     --mini-color-accent: #344c60;
     --mini-color-accent-hover: #243747;
+    --mini-color-danger: #854539;
+    --mini-color-danger-hover: #69362d;
     --mini-color-border: #8b8b7e;
     --mini-font-body: Arial, Helvetica, sans-serif;
     --mini-font-heading: Georgia, 'Times New Roman', serif;
     --mini-font-mono: 'Courier New', Courier, monospace;
     --mini-radius: 0.25rem;
-    --mini-space-2: 0.25rem;
-    --mini-space-3: 0.5rem;
-    --mini-space-4: 1rem;
+    --mini-space-sm: 0.25rem;
+    --mini-space-md: 0.5rem;
+    --mini-space-lg: 1rem;
   }
 }

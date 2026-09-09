@@ -1,23 +1,23 @@
 @layer mini {
   .mini-form {
     display: grid;
-    gap: var(--mini-space-4);
+    gap: var(--mini-space-lg);
   }
 
   .mini-label {
     display: block;
-    margin-bottom: var(--mini-space-2);
+    margin-bottom: var(--mini-space-sm);
     font-family: var(--mini-font-mono);
     font-size: 0.875rem;
     font-weight: 700;
   }
 
+  // Text-like inputs only; checkboxes, radios, ranges, and files keep native styles.
   .mini-input,
   .mini-select,
   .mini-textarea {
-    box-sizing: border-box;
     width: 100%;
-    padding: var(--mini-space-3);
+    padding: var(--mini-space-md);
     border: 1px solid var(--mini-color-border);
     border-radius: var(--mini-radius);
     font: inherit;
